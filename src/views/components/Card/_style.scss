@@ -1,0 +1,13 @@
+@import "/src/scss/variables";
+
+.card {
+  min-height: 355px;
+  border-radius: 2px;
+  width: 283px;
+  padding: 67px 33px 34px 33px;
+  border: 2px solid $border-color;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}

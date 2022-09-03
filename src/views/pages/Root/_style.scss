@@ -1,0 +1,13 @@
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  background-image: url("/assets/blob.svg");
+  background-repeat: no-repeat;
+  background-size: 715px;
+  background-position-y: 40%;
+  background-position-x: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

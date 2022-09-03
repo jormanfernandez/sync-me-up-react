@@ -1,0 +1,97 @@
+@import "/src/scss/variables";
+
+.all-options {
+  &.hide ~ .options {
+    max-height: 0px;
+    overflow: hidden;
+  }
+  display: inline-flex;
+  cursor: pointer;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.options {
+  transition: all 1s ease-in;
+  height: auto;
+  max-height: 150px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.0);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #CBD6E2;
+  }
+}
+
+.dropdown {
+  min-height: 22px;
+  border: 1px solid $dropdown-border-color;
+  background-color: $dropdown-background-color;
+  border-radius: 2px;
+  padding: 17px;
+  font-size: 16px;
+}
+
+i {
+  transition: transform 0.2s ease-in-out;
+  &.flipped-down {
+    transform: rotate(180deg);
+  }
+}
+
+.checkbox {
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+  border: 1px solid $checkbox-checked-color;
+}
+
+.checkbox:checked {
+  background-color: $checkbox-checked-color;
+}
+
+.checkbox::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  background-color: white;
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+.dropdown-item {
+  display: inline-flex;
+  cursor: pointer;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  label {
+    cursor: pointer;
+  }
+}

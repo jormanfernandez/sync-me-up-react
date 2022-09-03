@@ -1,0 +1,17 @@
+@import "/src/scss/variables";
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    width: 62px;
+    height: 62px;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+}

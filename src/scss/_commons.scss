@@ -1,0 +1,39 @@
+@import "/src/scss/_variables";
+@import "/src/scss/mixins";
+
+html, body, #root {
+	width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Noto Sans';
+}
+
+.icon-checkmark {
+  height: 1.5em;
+  width: 1.5em;
+  
+  &::after {
+    content: url('/assets/checkmark.svg');
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
+
+.icon-arrow {
+  height: 100%;
+  width: 1em;
+
+  &::after {
+    content: url('/assets/arrow.svg');
+    display: block;
+    height: 100%;
+    width: 1em;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
